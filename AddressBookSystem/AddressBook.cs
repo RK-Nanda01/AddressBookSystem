@@ -16,16 +16,7 @@ namespace AddressBookSystem
 
         }
 
-        public void DisplayContactBook()
-        {
-
-            foreach(var ele in ContactBook)
-            {
-                Console.WriteLine($"Details of {ele.Key} are as follows:");
-                Console.WriteLine($"FirstName {ele.Value.firstName}");
-                Console.WriteLine($"zipCode {ele.Value.zipCode}");
-            }
-        }
+        
 	}
 }
 

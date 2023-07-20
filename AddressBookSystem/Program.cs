@@ -56,21 +56,9 @@ namespace AddressBookSystem
                         }
                 }
 
-
-
-
-                
-
-
-
             }
             
-            Contact amish = new Contact("Amish",
-                                          "Devgan", "Patna"," Patna" , " Patna", "ka@", 801503,
-                                          99876567520);
-
-            ContactBook.AddContactDetail("Amish", amish);
-            ContactBook.DisplayContactBook();
+           
         }
     }
 }
