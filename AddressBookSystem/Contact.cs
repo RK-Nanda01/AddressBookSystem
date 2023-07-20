@@ -8,9 +8,9 @@ namespace AddressBookSystem
 	{
 		public string firstName, lastName, address, state,city, email;
 		public int zipCode;
-        public long phoneNunber;
+        public long phoneNumber;
 
-		public Contact(string firstName, string lastName, string address, string state, string city, string email,int zipCode, long phoneNunber)
+		public Contact(string firstName, string lastName, string address, string state, string city, string email,int zipCode, long phoneNumber)
 		{
 			this.firstName = firstName;
 			this.lastName = lastName;
@@ -19,7 +19,7 @@ namespace AddressBookSystem
             this.city = city;
             this.email = email;
 			this.zipCode = zipCode;
-			this.phoneNunber = phoneNunber;
+			this.phoneNumber = phoneNumber;
         }
 		
 	}
