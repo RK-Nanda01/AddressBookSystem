@@ -9,6 +9,7 @@ namespace AddressBookSystem
     {
         private static void Main(string[] args)
         {
+            ListAddressBook listOfAddressBook = new ListAddressBook();
             AddressBook ContactBook = new AddressBook();
             Console.WriteLine("Welcome to Address Book Program");
 
@@ -22,6 +23,7 @@ namespace AddressBookSystem
                 Console.WriteLine("3.Delete Contact");
                 Console.WriteLine("4.Display A Contact");
                 Console.WriteLine("5.Display Address Book");
+                Console.WriteLine("6.Add another Address Book");
                 Console.WriteLine("0.Exit");
                 option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -132,6 +134,15 @@ namespace AddressBookSystem
                                 ContactBook.DisplayContactBook();
                             }
                             
+                            break;
+                        }
+                    case 6:
+                        {
+
+                            string nameOfBook;
+                            Console.WriteLine("Enter the name to Address book");
+                            nameOfBook = Console.ReadLine();
+                            listOfAddressBook.addAddressBook(nameOfBook, ContactBook);
                             break;
                         }
 
