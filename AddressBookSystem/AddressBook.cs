@@ -16,6 +16,24 @@ namespace AddressBookSystem
 
         }
 
+        public bool IfPersonExists(string firstName)
+        {
+            if (ContactBook.ContainsKey(firstName))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void UpdateDetails(string firstName, string newDetail)
+        {
+            ContactBook[firstName].city = newDetail;
+
+        }
+
         
 	}
 }
