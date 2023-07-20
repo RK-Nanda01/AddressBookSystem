@@ -19,6 +19,7 @@ namespace AddressBookSystem
                 Console.WriteLine("Menu->");
                 Console.WriteLine("1.Add Contact Details to the Contact Book");
                 Console.WriteLine("2.Edit Contact Details");
+                Console.WriteLine("3.Delete Contact");
                 Console.WriteLine("0.Exit");
                 option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -77,6 +78,25 @@ namespace AddressBookSystem
                             }
 
                             break;
+                        }
+
+                    case 3:
+                        {
+                            string firstName;
+                            Console.WriteLine("Enter the name to delete contact");
+                            firstName = Console.ReadLine();
+                            bool res;
+                            res = ContactBook.DeleteContact(firstName);
+                            if(res)
+                            {
+                                Console.WriteLine("Contact Successfully Deleted");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Contact Does Not Exist");
+                            }
+
+                            break; 
                         }
                 }
 

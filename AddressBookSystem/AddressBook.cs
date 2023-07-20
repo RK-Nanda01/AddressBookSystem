@@ -34,6 +34,12 @@ namespace AddressBookSystem
 
         }
 
+        public bool DeleteContact(string firstName)
+        {
+            return ContactBook.Remove(firstName);
+
+        }
+
         
 	}
 }
