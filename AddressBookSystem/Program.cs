@@ -20,6 +20,8 @@ namespace AddressBookSystem
                 Console.WriteLine("1.Add Contact Details to the Contact Book");
                 Console.WriteLine("2.Edit Contact Details");
                 Console.WriteLine("3.Delete Contact");
+                Console.WriteLine("4.Display A Contact");
+                Console.WriteLine("5.Display Address Book");
                 Console.WriteLine("0.Exit");
                 option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -98,6 +100,41 @@ namespace AddressBookSystem
 
                             break; 
                         }
+
+                    case 4:
+                        {
+                            string firstName;
+                            Console.WriteLine("Enter the name to view contact details");
+                            firstName = Console.ReadLine();
+                            if (ContactBook.IfPersonExists(firstName))
+                            {
+                                ContactBook.ViewContact(firstName);
+                            }
+                            else
+                            {
+                                Console.WriteLine("The contact does not exist");
+                            }
+
+                          
+                            break;
+                        }
+                    case 5:
+                        {
+
+                            if(ContactBook.GetSizeOfContactBook() == 0)
+                            {
+
+                                Console.WriteLine("Contact Book is Empty");
+                            }
+
+                            else
+                            {
+                                ContactBook.DisplayContactBook();
+                            }
+                            
+                            break;
+                        }
+
                 }
 
             }

@@ -40,6 +40,44 @@ namespace AddressBookSystem
 
         }
 
+        public void DisplayContactBook()
+        {
+
+
+            foreach(var ele in ContactBook)
+            {
+                Console.WriteLine($"Contact Details of {ele.Key}");
+                Console.WriteLine($"First Name--> {ele.Value.firstName}");
+                Console.WriteLine($"Last Name--> {ele.Value.lastName}");
+                Console.WriteLine($"State Name--> {ele.Value.state}");
+                Console.WriteLine($"City Name--> {ele.Value.city}");
+                Console.WriteLine($"Address--> {ele.Value.address}");
+                Console.WriteLine($"Email --> {ele.Value.email}");
+                Console.WriteLine($"Zip Code --> {ele.Value.zipCode}");
+                Console.WriteLine($"Phone Number --> {ele.Value.phoneNumber}");
+            }
+        }
+
+        public void ViewContact(string firstName)
+        {
+            Console.WriteLine($"Contact Details of {firstName}");
+            Console.WriteLine($"First Name--> {ContactBook[firstName].firstName}");
+            Console.WriteLine($"First Name--> {ContactBook[firstName].lastName}");
+            Console.WriteLine($"State Name--> {ContactBook[firstName].state}");
+            Console.WriteLine($"City Name--> {ContactBook[firstName].city}");
+            Console.WriteLine($"Address--> {ContactBook[firstName].address}");
+            Console.WriteLine($"Email --> {ContactBook[firstName].email}");
+            Console.WriteLine($"Zip Code --> {ContactBook[firstName].zipCode}");
+            Console.WriteLine($"Phone Number --> {ContactBook[firstName].phoneNumber}");
+
+        }
+
+        public int GetSizeOfContactBook()
+        {
+            return ContactBook.Count;
+        }
+        
+
         
 	}
 }
